@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Amazon Price Comparison",
+  "version": "1.0",
+  "description": "Compare prices of similar products on Amazon.",
+  "permissions": ["activeTab"],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Amazon Price Comparison"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*"],
+      "js": ["js/content.js"]
+    }
+  ]
+}
